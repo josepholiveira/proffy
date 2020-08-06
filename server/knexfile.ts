@@ -1,13 +1,9 @@
 import path from 'path'
-import 'dotenv/config'
 
 module.exports = {
-  client: 'pg',
+  client: 'sqlite3',
   connection: {
-    host : process.env.PG_HOST,
-    user : process.env.PG_USER,
-    password : process.env.PG_PASSWORD,
-    database : process.env.PG_DATABASE,
+    filename: path.resolve(__dirname, 'src', 'database', 'database.sqlite'),
   },
   migrations: {
     directory: path.resolve(__dirname, 'src', 'database', 'migrations')

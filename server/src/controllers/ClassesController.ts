@@ -60,7 +60,7 @@ export default class ClassesController {
         avatar,
         whatsapp,
         bio
-      }).returning('id');
+      })
     
       const user_id = insertedUsersIds[0];
     
@@ -68,7 +68,7 @@ export default class ClassesController {
         subject,
         cost,
         user_id
-      }).returning('id');
+      })
     
       const class_id = insertedClassesIds[0];
     
